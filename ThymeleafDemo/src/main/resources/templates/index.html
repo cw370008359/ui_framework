@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    <div> [[${username}]] </div>
+    <section>
+        <h2>date使用</h2>
+        <title>创建当前时间</title>
+        <p>
+            [[${#dates.format(#dates.createNow(), 'yyyy-MM-dd HH:mm:ss')}]]</br>
+            [[${#dates.format(#dates.createToday(),'yyyy-MM-dd')}]]
+        </p>
+    </section>
+    <section>
+        <h2>文本框赋值</h2>
+        <p>
+            <input type="text" th:value="${username}"/>
+        </p>
+    </section>
+</body>
+</html>
